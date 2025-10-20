@@ -13,10 +13,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning={true}>
+      <head /> 
+      {
+        
+      }
+      <body className="bg-gray-900 text-white">
         <Navbar />
-        <main style={{ padding: '2rem' }}>
+        <main className="container mx-auto px-4 py-8">
           {children}
         </main>
       </body>
